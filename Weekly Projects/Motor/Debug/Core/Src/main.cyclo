@@ -1,0 +1,9 @@
+../Core/Src/main.c:77:5:main	4
+../Core/Src/main.c:142:6:EXTI0_IRQHandle	1
+../Core/Src/main.c:146:6:HAL_GPIO_EXTI_Callback	3
+../Core/Src/main.c:160:6:SystemClock_Config	3
+../Core/Src/main.c:206:13:MX_I2C1_Init	2
+../Core/Src/main.c:240:13:MX_I2S3_Init	2
+../Core/Src/main.c:274:13:MX_SPI1_Init	2
+../Core/Src/main.c:312:13:MX_GPIO_Init	1
+../Core/Src/main.c:422:6:Error_Handler	1
