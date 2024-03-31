@@ -139,20 +139,6 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-void EXTI0_IRQHandle(void){
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-	if(GPIO_Pin == GPIO_PIN_0){
-		if (state == ANTI_CLOCKWISE){
-			state = OFF;
-		}
-		else{
-			state++;
-		}
-	}
-}
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -362,11 +348,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
   HAL_GPIO_Init(PDM_OUT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Button_Pin */
-  GPIO_InitStruct.Pin = Button_Pin;
+  /*Configure GPIO pin : PA0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(Button_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BOOT1_Pin */
   GPIO_InitStruct.Pin = BOOT1_Pin;
@@ -413,6 +399,15 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if (GPIO_Pin==GPIO_PIN_0){
+		if (state == ANTI_CLOCKWISE){
+			state = OFF;
+		}
+		else
+			state++;
+	}
+}
 /* USER CODE END 4 */
 
 /**

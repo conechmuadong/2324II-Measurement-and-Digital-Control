@@ -9,6 +9,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\Infared_LED"/>
+			<item value="E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\Motor"/>
 			<item value="E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Assignment1\LED"/>
 			<item value="E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Assignment1\Inffared LED"/>
 		</list>
