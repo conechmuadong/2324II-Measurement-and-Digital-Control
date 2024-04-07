@@ -3081,3 +3081,66 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-31 22:01:27.944
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-04-04 23:37:48.042 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-04 23:39:44.967
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-04 23:39:44.973
+!MESSAGE Log4j2 initialized with config file E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-04 23:39:51.564
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-04 23:41:08.236
+!MESSAGE Indexed 'UART_Oscilloscope' (36 sources, 100 headers) in 3.92 sec: 7,847 declarations; 50,067 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)
+!SESSION 2024-04-04 23:49:41.570 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-04 23:49:46.967
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-04 23:49:46.968
+!MESSAGE Log4j2 initialized with config file E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-04 23:49:51.772
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-04-05 09:29:00.926 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-05 09:39:32.838
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-05 09:39:32.848
+!MESSAGE Log4j2 initialized with config file E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-05 09:39:42.480
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-04-08 00:10:57.231 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-08 00:14:40.331
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-08 00:14:40.339
+!MESSAGE Log4j2 initialized with config file E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-08 00:14:51.850
+!MESSAGE Started RMI Server, listening on port 41337
