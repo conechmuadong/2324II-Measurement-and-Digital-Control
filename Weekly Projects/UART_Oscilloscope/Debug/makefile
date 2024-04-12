@@ -65,7 +65,7 @@ main-build: UART_Oscilloscope.elf secondary-outputs
 
 # Tool invocations
 UART_Oscilloscope.elf UART_Oscilloscope.map: $(OBJS) $(USER_OBJS) E:\Courses\23-24-II\Introduction\ of\ Measurement\ and\ Digital\ Control\2324II-Measurement-and-Digital-Control\Weekly\ Projects\UART_Oscilloscope\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "UART_Oscilloscope.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\UART_Oscilloscope\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Oscilloscope.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "UART_Oscilloscope.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Courses\23-24-II\Introduction of Measurement and Digital Control\2324II-Measurement-and-Digital-Control\Weekly Projects\UART_Oscilloscope\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Oscilloscope.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

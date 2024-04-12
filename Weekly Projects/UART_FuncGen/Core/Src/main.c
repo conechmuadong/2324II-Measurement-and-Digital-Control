@@ -104,16 +104,27 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-
+  char buffer[64]="";
+//  uint8_t value;
+  char voltage;
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	 uint8_t value;
-	 if (HAL_UART_Receive(&huart5, &value, sizeof(value), 500) == HAL_OK){
-		 GPIOE->ODR = value << 8;
+	 if (HAL_UART_Receive(&huart5, (uint8_t*)buffer, 1, 500) == HAL_OK){
+		 voltage = buffer[0];
+		 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 1);
+//		 sprintf(buffer, sizeof(buffer), "%d@", value);
+		 HAL_UART_Transmit(&huart5, (uint8_t*)buffer, strlen(buffer), 500);
 	 }
-    /* USER CODE END WHILE */
+	 else{
+		 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
+	 }
+	 uint32_t value = (uint32_t)voltage;
+	 GPIOE->ODR = value << 8;
+//	 value = 128;
+//	 GPIOE->ODR = (uint32_t)(value)<< 8;
+//    /* USER CODE END WHILE */
 //    MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
@@ -302,16 +313,12 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOD, LD4_Pin|LD3_Pin|LD5_Pin|LD6_Pin
                           |Audio_RST_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : CS_I2C_SPI_Pin PE8 PE9 PE10
-                           PE11 PE12 PE13 PE14
-                           PE15 */
-  GPIO_InitStruct.Pin = CS_I2C_SPI_Pin|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
-                          |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
-                          |GPIO_PIN_15;
+  /*Configure GPIO pin : CS_I2C_SPI_Pin */
+  GPIO_InitStruct.Pin = CS_I2C_SPI_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+  HAL_GPIO_Init(CS_I2C_SPI_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : OTG_FS_PowerSwitchOn_Pin */
   GPIO_InitStruct.Pin = OTG_FS_PowerSwitchOn_Pin;
@@ -331,6 +338,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PE8 PE9 PE10 PE11
+                           PE12 PE13 PE14 PE15 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
+                          |GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD4_Pin LD3_Pin LD5_Pin LD6_Pin
                            Audio_RST_Pin */
