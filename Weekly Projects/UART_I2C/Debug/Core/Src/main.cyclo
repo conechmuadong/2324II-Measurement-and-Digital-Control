@@ -1,0 +1,8 @@
+../Core/Src/main.c:74:5:main	3
+../Core/Src/main.c:143:6:SystemClock_Config	3
+../Core/Src/main.c:180:13:MX_I2C1_Init	2
+../Core/Src/main.c:214:13:MX_USART1_UART_Init	2
+../Core/Src/main.c:247:13:MX_GPIO_Init	1
+../Core/Src/main.c:261:26:I2C_Measure_Temperature	3
+../Core/Src/main.c:273:26:I2C_Measure_Humidity	3
+../Core/Src/main.c:291:6:Error_Handler	1
